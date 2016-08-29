@@ -5,3 +5,5 @@ Randomly select dinner recipes for the coming week and create a shopping list of
 Recipes are currently kept in .txt files in the src/recipes directory.
 
 Entry point found in the src/controller directory
+
+Very much a work in progress
