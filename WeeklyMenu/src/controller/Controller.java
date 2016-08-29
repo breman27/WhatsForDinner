@@ -14,7 +14,7 @@ import recipes.Recipes;
  * 
  **/
 public class Controller {
-	/*
+	/**
 	 * Program entry point.
 	 */
 	public static void main(String[] args) throws IOException {
@@ -22,6 +22,6 @@ public class Controller {
 		for (int i = 0; i < recipes.size(); i++) {
 			recipes.get(i).print();
 			System.out.println("\n");
-		}
-	}
-}
+		} // End for
+	} // End main
+} // End Controller
