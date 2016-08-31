@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 
+import recipes.Recipe;
 import recipes.Recipes;
 
 /**
@@ -19,9 +20,23 @@ public class Controller {
 	 */
 	public static void main(String[] args) throws IOException {
 		Recipes recipes = new Recipes();
-		for (int i = 0; i < recipes.size(); i++) {
-			recipes.get(i).print();
-			System.out.println("\n");
-		} // End for
+		Recipe[] r = new Recipe[7];
+		boolean[] visited = new boolean[recipes.size()];
+		int i = 0;
+		while (i < 2) {
+			int index = (int) Math.floor(Math.random()
+					* recipes.size());
+			if (!visited[index]) {
+				visited[index] = true;
+				r[i] = recipes.get(index);
+				i++;
+			}
+		}
+		for (int j = 0; j < r.length; j++) {
+			if (r[j] != null) {
+				r[j].print();
+				System.out.println("\n");
+			}
+		}
 	} // End main
 } // End Controller
